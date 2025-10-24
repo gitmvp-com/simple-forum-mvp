@@ -1,0 +1,21 @@
+{
+  "name": "simple-forum-mvp",
+  "version": "1.0.0",
+  "description": "A simple forum MVP with topics, posts, and basic discussion features",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["forum", "discussion", "community"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.2.2"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}
