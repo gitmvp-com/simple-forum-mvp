@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Forum</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <h1>📋 Simple Forum</h1>
+        <p class="tagline">Community discussions made simple</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Topics List View -->
+      <div id="topics-view" class="view">
+        <div class="view-header">
+          <h2>All Topics</h2>
+          <button class="btn btn-primary" onclick="showNewTopicForm()">+ New Topic</button>
+        </div>
+        <div id="topics-list" class="topics-list">
+          <div class="loading">Loading topics...</div>
+        </div>
+      </div>
+
+      <!-- New Topic Form -->
+      <div id="new-topic-view" class="view" style="display: none;">
+        <div class="view-header">
+          <h2>Create New Topic</h2>
+          <button class="btn btn-secondary" onclick="showTopicsList()">← Back</button>
+        </div>
+        <form id="new-topic-form" class="forum-form">
+          <div class="form-group">
+            <label for="topic-title">Topic Title</label>
+            <input type="text" id="topic-title" required placeholder="What's your topic about?">
+          </div>
+          <div class="form-group">
+            <label for="topic-author">Your Name</label>
+            <input type="text" id="topic-author" required placeholder="Your username">
+          </div>
+          <div class="form-group">
+            <label for="topic-content">First Post</label>
+            <textarea id="topic-content" required placeholder="Start the discussion..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Topic</button>
+        </form>
+      </div>
+
+      <!-- Topic Detail View -->
+      <div id="topic-view" class="view" style="display: none;">
+        <div class="view-header">
+          <button class="btn btn-secondary" onclick="showTopicsList()">← Back to Topics</button>
+        </div>
+        <div id="topic-detail">
+          <div class="loading">Loading topic...</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Simple Forum MVP - Built with Node.js, Express & SQLite</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
